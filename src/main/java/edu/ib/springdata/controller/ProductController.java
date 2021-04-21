@@ -42,14 +42,13 @@ public class ProductController {
     }
 
     @PatchMapping("/admin/product/{id}")
-    public @ResponseBody
-    void patchById(@PathVariable Long id, @RequestBody Map<Object, Object> fields) {
+    public Product patchById(@PathVariable Long id, @RequestBody Map<Object, Object> fields) {
         Product product = products.findById(id).get();
         fields.forEach((k, v) -> {
             Field field = ReflectionUtils.findField(Product.class, (String) k);
             field.setAccessible(true);
             ReflectionUtils.setField(field, product, v);
         });
-        products.save(product);
+        return products.save(product);
     }
 }
