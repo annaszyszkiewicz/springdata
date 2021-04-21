@@ -41,7 +41,7 @@ public class OrderController {
         return orders.save(order);
     }
 
-    @PatchMapping("/admin/order")
+    @PatchMapping("/admin/order/{id}")
     public @ResponseBody
     void patchById(@PathVariable Long id, @RequestBody Map<Object, Object> fields) {
         Order order = orders.findById(id).get();

@@ -41,7 +41,7 @@ public class ProductController {
         return products.save(product);
     }
 
-    @PatchMapping("/admin/product")
+    @PatchMapping("/admin/product/{id}")
     public @ResponseBody
     void patchById(@PathVariable Long id, @RequestBody Map<Object, Object> fields) {
         Product product = products.findById(id).get();

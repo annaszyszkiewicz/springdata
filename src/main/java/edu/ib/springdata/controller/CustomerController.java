@@ -41,7 +41,7 @@ public class CustomerController {
         return customers.save(customer);
     }
 
-    @PatchMapping("/admin/customer")
+    @PatchMapping("/admin/customer/{id}")
     public @ResponseBody
     void patchById(@PathVariable Long id, @RequestBody Map<Object, Object> fields) {
         Customer customer = customers.findById(id).get();
