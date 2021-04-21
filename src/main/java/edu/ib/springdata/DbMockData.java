@@ -1,5 +1,11 @@
 package edu.ib.springdata;
 
+import edu.ib.springdata.repository.CustomerRepository;
+import edu.ib.springdata.repository.OrderRepository;
+import edu.ib.springdata.repository.ProductRepository;
+import edu.ib.springdata.repository.entity.Customer;
+import edu.ib.springdata.repository.entity.Order;
+import edu.ib.springdata.repository.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
