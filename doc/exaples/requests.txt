@@ -1,0 +1,82 @@
+GET http://localhost:8082/api/product/all
+
+GET http://localhost:8082/api/product?id=1
+
+POST http://localhost:8082/api/admin/product
+{
+    "name": "Uszczelka",
+    "price": 5.50,
+    "available": true
+}
+
+PUT http://localhost:8082/api/admin/product
+{
+    "id": 3,
+    "name": "Deska brzozowa",
+    "price": 50.00,
+    "available": true
+}
+
+PATCH http://localhost:8082/api//admin/product/1
+{
+    "name": "Koreczek"
+}
+
+GET http://localhost:8082/api/customer/all
+
+GET http://localhost:8082/api/customer?id=33
+
+POST http://localhost:8082/api/admin/customer
+{
+    "name": "Adam Nowak",
+    "address": "Wrocław"
+}
+
+PUT http://localhost:8082/api/admin/customer
+{
+    "id": 99,
+    "name": "Hanna Nowak",
+    "address": "Kraków"
+}
+
+PATCH http://localhost:8082/api/customer?id=1
+    {
+        "name": "Anna Kowalska"
+    }
+
+GET http://localhost:8082/api/order/all
+
+GET http://localhost:8082/api/order?id=1
+
+POST http://localhost:8082/api/admin/order
+{
+    "customer": {
+        "id": 97
+    },
+    "products": [
+        {"id": 98},
+        {"id": 1}
+    ],
+    "placeDate": "2021-04-21T23:45:44.426998",
+    "status": "in progress"
+}
+
+PUT http://localhost:8082/api/admin/order
+{
+   "id":102,
+    "customer": {
+        "id": 1
+    },
+    "products": [
+        {"id": 2},
+        {"id": 98}
+    ],
+    "placeDate": "2021-04-21T23:45:44.426998",
+    "status": "in progress"
+}
+
+PATCH http://localhost:8082/api//admin/order/1
+{
+    "status": "complete"
+}
+
