@@ -1,0 +1,8 @@
+2021-05-10 18:32:08 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT * FROM CUSTOMER ORDER_TABLE ORDER_TABLE[*]"
+Syntax error in SQL statement "SELECT * FROM CUSTOMER ORDER_TABLE ORDER_TABLE[*]"; SQL statement:
+SELECT * FROM CUSTOMER ORDER_TABLE ORDER_TABLE [42000-200]
+2021-05-10 18:32:09 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "SELECT * FROM CUSTOMER ORDER_TABLE ORDER_TABLE[*]"
+Syntax error in SQL statement "SELECT * FROM CUSTOMER ORDER_TABLE ORDER_TABLE[*]"; SQL statement:
+SELECT * FROM CUSTOMER ORDER_TABLE ORDER_TABLE [42000-200]
