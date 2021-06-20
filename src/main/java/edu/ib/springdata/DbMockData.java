@@ -37,7 +37,7 @@ public class DbMockData {
 
         Iterable customers = customerRepository.findAll();
         if (!customers.iterator().hasNext()) {
-            Customer customer = new Customer("Jan Kowalski", "Wrocław");
+            Customer customer = new Customer("Jan Kowalski", "Wroclaw");
             customerRepository.save(customer);
         }
 
